@@ -1,7 +1,17 @@
+import axios from 'axios'
 import MovieCard from 'components/MovieCard'
 import Pagination from 'components/Pagination'
 
 function Listing() {
+
+//forma errada apenas para teste de requisição
+axios.get('http://localhost:8080/movies?size=12&page=0')
+  .then(response => 
+    {
+      console.log(response.data);
+    }
+  )
+
   return (
     <>
       <Pagination />
